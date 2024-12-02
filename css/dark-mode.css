@@ -1,0 +1,98 @@
+/* Apply styles only in dark mode */
+@media (prefers-color-scheme: dark) {
+    /* Backgrounds */
+    main, body, header, p, footer, .card, .trip, .destination, .modal-content, .form, .navbar, .gallery {
+        background-color: #000000; /* Set everything to black */
+        color: #ffffff; /* Ensure text is white or light */
+    }
+
+    body {
+        color: black;
+    }
+    header {
+        background: black;
+    }
+
+    .hero{
+        background: #323131;
+    }
+    .hero h1 {
+        color: white;
+    }
+
+    .cta {
+        background: #999999;
+        color: #ffffff;
+    }
+
+    form button, button:hover, .top-tip-btn:hover, .weather-btn:hover {
+        background-color: #999999;
+    }
+
+    #suggestion-box, .featured-destinations {
+        background-color: #272626; /* Pure white */
+    }
+    
+    #poll-result {
+        background-color: #999999;
+    }
+    form, #output, .modal-content, .blog-post {
+        background-color: #444242;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    #photo-albums {
+        background-color: #323131;
+    }
+    .read-more-btn, .read-more-btn:hover {
+        background-color: #252222;
+    }
+
+    section p {
+        background-color: #444242;
+    }
+
+    .profile-card {
+        background: #3e3d3d;
+    }
+ /* Links
+ 
+  */
+
+    a {
+        color: #ffffff; /* Make links white or light for readability */
+    }
+
+    a:hover {
+        color: #cccccc; /* Slightly muted white for hover */
+    }
+
+    /* Inputs, Buttons, and Textareas */
+    input, select, textarea, button, .btn {
+        background-color: #999999; /* Black background */
+        color: #ffffff; /* Light text */
+        border: 1px solid #ffffff; /* Optional: Light border for visibility */
+    }
+
+    input::placeholder, textarea::placeholder {
+        color: #999999; /* Gray placeholder text */
+    }
+
+    /* Remove shadows or make them lighter */
+    * {
+        box-shadow: none; /* Removes shadows */
+    }
+
+    /* Modals */
+    .modal {
+        background-color: rgba(0, 0, 0, 0.9); /* Black with slight transparency */
+    }
+
+    /* Special Elements (Optional) */
+    h1, h2, h3, h4, h5, h6, p, li {
+        color: #ffffff; /* Make all headings and text white */
+    }
+}
+
+

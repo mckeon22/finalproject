@@ -1,0 +1,895 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Clean, modern font */
+    background-color: #f0f4f8; /* Light Grayish Blue */
+    color: #333333; /* Deep Gray for text */
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Header and Navbar */
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Vibrant gradient */
+    padding: 20px 5%; /* Adjusted padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: sticky; /* Keeps the header visible while scrolling */
+    top: 0;
+    z-index: 1000;
+    color: #ffffff; /* White text */
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif; /* Elegant font for title */
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.navbar nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar nav ul li a {
+    color: #ffffff; /* White links */
+    font-size: 15px;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2); /* Subtle translucent background */
+    transition: background 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar nav ul li a:hover {
+    background: #ffffff; /* White background on hover */
+    color: #6a11cb; /* Vibrant text color on hover */
+}
+
+/* Hero Section */
+.hero {
+    height: 70vh; /* Smaller height */
+    background: linear-gradient(135deg, #f0f4f8, #e0e7ef),center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #333333; /* Deep Gray text */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #6a11cb; /* Vibrant color for clarity */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Adds depth */
+}
+
+
+
+
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Ensure content sits above the overlay */
+    animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
+ }
+ 
+ 
+ @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+ }
+ 
+ /* Call-to-Action Buttons */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+ }
+ 
+ 
+ .cta {
+    display: inline-block;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Vibrant gradient */
+    color: #ffffff; /* Pure White */
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden; /* Ensures ripple effect stays inside the button */
+ }
+ 
+ 
+ .cta:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    background: linear-gradient(135deg, #2575fc, #6a11cb); /* Lighter gradient */
+ }
+ 
+ 
+ .cta::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+ }
+ 
+ 
+ .cta:active::after {
+    width: 300px;
+    height: 300px;
+ }
+ 
+ 
+ 
+
+/* Main Content */
+main {
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #ffffff; /* White background for main content */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #6a11cb;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 50px;
+    height: 3px;
+    background-color: #2575fc; /* Accent color */
+    border-radius: 3px;
+}
+
+section p {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Featured Destinations Section */
+.featured-destinations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Space between cards */
+    padding: 20px;
+}
+
+/* Destination Cards */
+.destination, .trip {
+    background-color: #FFFFFF; /* White background */
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination:hover, .trip:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+}
+
+.destination img, .trip img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #6a11cb; /* Vibrant purple */
+    margin: 0.5rem;
+}
+
+ p {
+    color: #555555; /* Softer gray */
+    font-size: 1rem;
+    margin: 0.5rem;
+    padding: 0 0.5rem 1rem;
+}
+
+/* Map */
+#map {
+    height: 500px; /* Increased height for map */
+    width: 100vw; /* Full width of viewport */
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for map */
+}
+
+.top-tip-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    display: block; /* Ensure it's treated as a block-level element */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+    text-align: center; /* Center the text inside the button */
+}
+
+
+button:hover, .top-tip-btn:hover, .weather-btn:hover, .submit-btn:hover {
+    background-color: #8b49d2;
+    color: white;
+}
+
+button, .top-tip-btn, .weather-btn, .submit-btn {
+    background-color: #6a11cb;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #6a11cb; /* Vibrant purple */
+    padding: 20px;
+    color: #FFFFFF; /* White text */
+    text-align: center;
+}
+
+footer h2, footer h3, footer p, footer a {
+    color: white;
+  }
+  
+
+
+
+/* Lightbox overlay */
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ 
+ /* Lightbox image */
+ .lightbox-img {
+    width: 90%; /* Use a percentage to control size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+ }
+ 
+ 
+ /* Close button */
+ .lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+ }
+ 
+ /* Weather Button Styles */
+.weather-btn {
+  
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease;
+}
+
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 60%; /* Adjust the percentage to suit your needs */
+    text-align: center;
+    color: #333333;
+    box-sizing: border-box; /* Ensure padding doesn't increase width */
+}
+
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#suggestion-box {
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #ffffff; /* Light background */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Adjust the percentage as needed */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+
+
+
+#suggestion-box p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#suggestion-form input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.poll-options label {
+    display: block;
+    margin: 10px 0;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+#poll-result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f4f8;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Sidebar Styling */
+#blog-sidebar {
+    background: var(--card-bg);
+    box-shadow: 0 4px 10px var(--card-shadow);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+#blog-sidebar h2 {
+    color: var(--highlight-color);
+    margin-bottom: 15px;
+}
+
+#blog-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#blog-sidebar ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+#blog-sidebar ul li a:hover {
+    color: var(--highlight-color);
+}
+
+#blog-sidebar .social-links a {
+    display: inline-block;
+    color: var(--highlight-color);
+    text-decoration: none;
+    margin: 5px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+#blog-sidebar .social-links a:hover {
+    transform: scale(1.2);
+}
+
+/* Blog Grid */
+.blog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Blog Post Styling */
+.blog-post {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: calc(30% - 20px); /* Three posts per row with gap */
+    flex: 1 1 220px; /* Sets the basis for flexible width */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 450px;
+    padding: 15px;
+}
+
+
+/* Blog Image */
+.blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+
+
+
+
+/* Read More Button */
+.read-more-btn {
+    background-color: #fa39d7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: auto;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.read-more-btn:hover {
+    background-color: #c72ea6;
+    transform: translateY(-2px);
+}
+
+.read-more-btn:active {
+    background-color: #a6268a;
+    transform: translateY(0);
+}
+
+
+/* Modal Container */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scrolling if content is larger than the window */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+/* Close Button */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: #fa39d7;
+}
+
+/* List Styling */
+.modal-content ul {
+    padding: 0 10px;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Read More Button */
+.read-more-btn {
+    background-color: #fa39d7; /* Vibrant pink background */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.read-more-btn:hover {
+    background-color: #c72ea6; /* Darker pink on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.read-more-btn:active {
+    background-color: #a6268a; /* Even darker pink on click */
+    transform: translateY(0); /* Reset lift effect */
+}
+
+
+/* Photo Albums Section */
+#photo-albums {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+
+.albums-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    gap: 20px; /* Adds space between albums */
+}
+
+.album {
+    width: 250px; /* Fixed width for uniformity */
+    height: 350px; /* Fixed height for uniformity */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.album:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.album-cover {
+    width: 100%; /* Ensure image fits container width */
+    height: 80%; /* Maintain consistent height */
+    object-fit: cover; /* Prevent image distortion */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+form, #output, .modal-content, .blog-post {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Centering and Styling the Form */
+form {
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%; /* Full width by default */
+    margin: 30px auto;
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+
+/* Form Labels */
+form label {
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Inputs, Selects, and Textareas */
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #555555;
+}
+
+/* Textarea Placeholder Styling */
+form textarea::placeholder {
+    color: #aaaaaa;
+    font-style: italic;
+}
+
+/* Submit Button */
+form button {
+    background-color: #6a11cb;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Styling Dropdown Menu */
+form select {
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+/* Form Container Margins */
+form {
+    margin: 20px auto;
+}
+/* Styling the Output Section */
+/* Styling the Output Section */
+#output {
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%; /* Full width by default */
+    margin: 30px auto;
+    font-family: 'Arial', sans-serif;
+    color: #333333;
+}
+
+/* Use min-width query for larger screens */
+@media (min-width: 600px) {
+    form, #output {
+        width: 600px; /* Fixed width for larger screens */
+    }
+}
+
+
+/* Itinerary Heading */
+#output h2 {
+    font-size: 24px;
+    color: #6a11cb;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Itinerary Content */
+#output p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 10px 0;
+}
+
+/* Emphasized Labels */
+#output p strong {
+    font-weight: bold;
+    color: #000000;
+}
+
+
+/* Add spacing between sections */
+#output div {
+    margin-bottom: 15px;
+}
+
+
+
+
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none;
+        transition: none;
+        scroll-behavior: auto;
+    }
+
+    a:hover, button:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+
+/* Profile Card Container */
+.profile-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 80%; /* Default width is 80% */
+    margin: 50px auto; /* Centers the card in the container */
+    position: relative;
+    overflow: hidden;
+    color: #fff; /* Ensures text is readable on a dark background */
+}
+
+/* Use min-width for larger screens */
+@media (min-width: 900px) {
+    .profile-card {
+        width: 900px; /* Fixed width for screens larger than 900px */
+    }
+}
+
+/* Left Section: Avatar */
+.profile-card-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #333333; /* Border for the avatar */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); /* Glow effect */
+}
+
+/* Right Section: Text */
+.profile-card-right {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.profile-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #f5f5f5;
+}
+
+.profile-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #cccccc; /* Softer text color */
+}
+
+/* Decorative Background Glow */
+.profile-card::before, .profile-card::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 100, 0.8), transparent);
+    opacity: 0.8;
+    z-index: -1; /* Places the glow behind the card */
+}
+
+.profile-card::before {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -50px;
+}
+
+.profile-card::after {
+    width: 400px;
+    height: 400px;
+    bottom: -100px;
+    right: -50px;
+}
+
+
+/* Style the gallery container */
+#modal-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 3 images per row on larger screens */
+    gap: 10px; /* Add spacing between images */
+    margin-top: 20px;
+}
+
+/* Style the images inside the gallery */
+#modal-gallery img {
+    width: 100%; /* Images will take full width of the grid cell */
+    height: 150px; /* Set a consistent height */
+    object-fit: cover; /* Ensure the image fits nicely */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add slight shadow */
+    cursor: pointer; /* Optional: Change cursor to pointer for interaction */
+}
+
