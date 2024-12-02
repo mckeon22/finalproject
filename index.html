@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link id="dark-mode-stylesheet" rel="stylesheet" href="css/dark-mode.css" />
+ 
+    
+    
+    <!-- Link to Leaflet CSS and JavaScript Files in the 'js' folder -->
+    <link rel="stylesheet" href="js/leaflet.css">
+    <script src="js/leaflet.js"></script>
+    
+    <title>Keelin's Kilometers</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navbar-left">
+                <h1>Keelin's Kilometers</h1>
+            </div>
+            <div class="navbar-right">
+        
+                <nav id="nav-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="trips.html">My Trips</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+  
+
+
+    <div class="hero">
+        <div class="hero-content">
+          <h1>Discover the World One Kilometer at a Time</h1>
+          <p>Explore, Experience, Escape with Keelin</p>
+          <div class="cta-buttons">
+            <a href="trips.html" class="cta">Start Your Journey</a>
+            <a href="about.html" class="cta secondary">Learn About Me</a>
+          </div>
+        </div>
+      </div>
+
+      <section class="featured-destinations" id="destinations">
+        <h2>Featured Destinations</h2>
+        <div class="destination">
+          <img src="images/paris.jpg" alt="Paris">
+          <h3>Paris</h3>
+          <p>The City of Love awaits with breathtaking views and rich culture.</p>
+        </div>
+        <div class="destination">
+          <img src="images/dublin.jpg" alt="Dublin">
+          <h3>Dublin</h3>
+          <p>Where history meets modernity in Ireland’s vibrant capital.</p>
+        </div>
+        <div class="destination">
+    <img src="images/zakynthos.jpg" alt="Zakynthos">
+    <h3>Zakynthos</h3>
+    <p>Experience the turquoise waters and stunning cliffs of Greece's gem.</p>
+        </div>
+      </section>
+      
+      <form id="itineraryForm">
+        <label for="destination">Select a Destination:</label>
+        <select id="destination">
+            <option value="paris">Paris</option>
+            <option value="dublin">Dublin</option>
+            <option value="zakynthos">Zakynthos</option>
+        </select>
+    
+        <label for="dates">Select Travel Dates:</label>
+        <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" required>
+
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" required>
+        <label for="activities">Activities:</label>
+        <textarea id="activities" placeholder="Enter activities you plan to do (e.g., Eiffel Tower, Dublin Castle, etc.)"></textarea>
+    
+        <label for="accommodation">Accommodation Details:</label>
+        <textarea id="accommodation" placeholder="Enter accommodation details (e.g., hotel name, address)"></textarea>
+    
+        <button type="submit">Create My Itinerary</button>
+    </form>
+    
+    <div id="output">
+        <h2>Your Perfect Travel Itinerary 🌟</h2>
+        <!-- Any other static content goes here -->
+      </div>
+      
+
+
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h2>Keelin's Kilometers</h2>
+            </div>
+            <div class="footer-right">
+                <div class="footer-location">
+                    <h3>Location</h3>
+                    <p>123 Demo Street<br>New York, NY 12345</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p><a href="mailto:email@example.com">mckeon@umich.edu</a><br>(555) 555-5555</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
+
 
