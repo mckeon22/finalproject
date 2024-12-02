@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link id="dark-mode-stylesheet" rel="stylesheet" href="css/dark-mode.css" />
+    <script src="js/leaflet.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Blog - Keelin's Kilometers</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="navbar">
+            <div class="navbar-left">
+                <h1>Keelin's Kilometers</h1>
+            </div>
+            <div class="navbar-right">
+                <nav id="nav-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="trips.html">My Trips</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Blog Categories -->
+        <section id="recent-posts" class="section-padding">
+            <h2>Recent Posts</h2>
+            <div class="blog-grid">
+                <!-- Barcelona Post -->
+                <article class="blog-post">
+                    <img src="images/barcelona2.jpg" alt="Post thumbnail" class="blog-image">
+                    <h3>Exploring the Best of Barcelona</h3>
+                    <p>From Gaudí’s architecture to delicious tapas, here's what to do in Barcelona...</p>
+                    <button class="read-more-btn" data-modal="modal-barcelona">Read More</button>
+                </article>
+        
+                <!-- New York Post -->
+                <article class="blog-post">
+                    <img src="images/newyork2.jpg" alt="Post thumbnail" class="blog-image">
+                    <h3>Top 5 Attractions in New York City</h3>
+                    <p>A guide to must-see attractions in the city that never sleeps...</p>
+                    <button class="read-more-btn" data-modal="modal-newyork">Read More</button>
+                </article>
+        
+                <!-- Paris Post -->
+                <article class="blog-post">
+                    <img src="images/parisblog.jpg" alt="Eiffel Tower at sunset" class="blog-image">
+                    <h3>Paris in 48 Hours: A Whirlwind Tour of the City of Light</h3>
+                    <p>Experience the essence of Paris in just two days, from iconic landmarks to hidden gems...</p>
+                    <button class="read-more-btn" data-modal="modal-paris">Read More</button>
+                </article>
+            </div>
+        </section>
+
+
+
+<!-- Modals -->
+<!-- Modal for Barcelona -->
+<div id="modal-barcelona" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3>Exploring the Best of Barcelona: A 3-Day Itinerary</h3>
+        <p>Barcelona is a city that offers a variety of culture, architecture, and delicious cuisine. Here's my detailed itinerary for a 3-day adventure in this amazing city!</p>
+
+        <article class="itinerary-day">
+            <h4>Day 1: Architectural Wonders & Iconic Landmarks</h4>
+            <ul>
+                <li><strong>Morning:</strong> Visit <em>La Sagrada Familia</em>, Gaudí’s masterpiece. Arrive by 9 AM to avoid crowds and enjoy the breathtaking stained glass interiors.</li>
+                <li><strong>Mid-Morning:</strong> Stroll along <em>Passeig de Gràcia</em> and marvel at Gaudí’s works like <em>Casa Batlló</em> and <em>La Pedrera</em>. Enjoy a Catalan lunch at <strong>Ciudad Condal</strong>.</li>
+                <li><strong>Afternoon:</strong> Explore the Gothic Quarter, including the <em>Barcelona Cathedral</em> and <em>Plaça Reial</em>.</li>
+                <li><strong>Evening:</strong> Relax at <em>Barceloneta Beach</em>, watching the Mediterranean sunset.</li>
+            </ul>
+        </article>
+
+        <article class="itinerary-day">
+            <h4>Day 2: Parks, Panoramas & Local Flavors</h4>
+            <ul>
+                <li><strong>Morning:</strong> Visit <em>Park Güell</em>, another of Gaudí’s iconic creations. Arrive early to enjoy the tranquility and panoramic views of Barcelona.</li>
+                <li><strong>Lunch:</strong> Dine at <strong>El Nacional</strong>, a stylish food hall offering diverse Spanish dishes.</li>
+                <li><strong>Afternoon:</strong> Take the cable car to <em>Montjuïc Hill</em> and explore <em>Montjuïc Castle</em>, the <em>Magic Fountain</em>, and the <em>Joan Miró Foundation</em>.</li>
+                <li><strong>Evening:</strong> Experience a live Flamenco show at <strong>Palau Dalmases</strong>, paired with a tapas dinner at <strong>Tapeo</strong>.</li>
+            </ul>
+        </article>
+
+        <article class="itinerary-day">
+            <h4>Day 3: Markets, Museums & Hidden Gems</h4>
+            <ul>
+                <li><strong>Morning:</strong> Start your day at <em>La Boqueria Market</em>, Barcelona’s famous food market. Enjoy fresh fruit, pastries, and coffee.</li>
+                <li><strong>Mid-Morning:</strong> Visit the <em>Picasso Museum</em> in the charming El Born neighborhood to admire Picasso’s works.</li>
+                <li><strong>Lunch:</strong> Enjoy a meal at <strong>Can Cisa</strong>, a natural wine bar serving Catalan dishes.</li>
+                <li><strong>Afternoon:</strong> Explore <em>El Born Cultural Center</em> and visit the stunning <em>Santa Maria del Mar</em> Gothic church.</li>
+                <li><strong>Evening:</strong> End your trip with the <em>Magic Fountain Light Show</em> at Montjuïc.</li>
+            </ul>
+        </article>
+
+        <article class="itinerary-tips">
+            <h4>Additional Tips</h4>
+            <ul>
+                <li><strong>Transportation:</strong> Purchase a T10 ticket for easy access to public transport.</li>
+                <li><strong>Language:</strong> Spanish and Catalan are widely spoken, but English is common in tourist areas.</li>
+                <li><strong>Weather:</strong> Barcelona’s mild weather makes it perfect for walking and sightseeing year-round.</li>
+            </ul>
+        </article>
+    </div>
+</div>
+
+<!-- Modal for New York -->
+<div id="modal-newyork" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3>Top 5 Attractions in New York City: A 3-Day Itinerary</h3>
+        <p>
+            New York City is an iconic destination filled with vibrant culture, towering skyscrapers, and endless attractions. Here’s my detailed 3-day itinerary for an unforgettable experience:
+        </p>
+
+        <article class="itinerary-day">
+            <h4>Day 1: Exploring Manhattan</h4>
+            <ul>
+                <li><strong>Morning:</strong> Start your day at the <em>Empire State Building</em> to enjoy panoramic views of NYC. Arrive early to beat the crowds.</li>
+                <li><strong>Mid-Morning:</strong> Walk along <em>Fifth Avenue</em> for high-end shopping and iconic landmarks like the New York Public Library.</li>
+                <li><strong>Lunch:</strong> Dine at <strong>Shake Shack</strong> in Madison Square Park for a classic New York burger experience.</li>
+                <li><strong>Afternoon:</strong> Visit the <em>Metropolitan Museum of Art (The Met)</em> and explore its world-renowned exhibits.</li>
+                <li><strong>Evening:</strong> Take a stroll through <em>Times Square</em> to soak in the neon lights and vibrant energy.</li>
+            </ul>
+        </article>
+
+        <article class="itinerary-day">
+            <h4>Day 2: Parks, Skyline Views & History</h4>
+            <ul>
+                <li><strong>Morning:</strong> Start at <em>Central Park</em>. Rent a bike or take a leisurely walk to enjoy landmarks like <em>Bethesda Fountain</em> and <em>Strawberry Fields</em>.</li>
+                <li><strong>Mid-Morning:</strong> Head to <em>The Museum of Modern Art (MoMA)</em> to admire iconic works by artists like Van Gogh and Warhol.</li>
+                <li><strong>Lunch:</strong> Enjoy authentic New York pizza at <strong>Joe’s Pizza</strong>.</li>
+                <li><strong>Afternoon:</strong> Take the Staten Island Ferry for stunning views of the Statue of Liberty and the Manhattan skyline.</li>
+                <li><strong>Evening:</strong> Watch a Broadway show in the Theater District for a quintessential New York experience.</li>
+            </ul>
+        </article>
+
+        <article class="itinerary-day">
+            <h4>Day 3: Hidden Gems & Iconic Landmarks</h4>
+            <ul>
+                <li><strong>Morning:</strong> Visit the <em>9/11 Memorial & Museum</em> to reflect on the history and resilience of the city.</li>
+                <li><strong>Mid-Morning:</strong> Explore <em>Brooklyn Bridge</em>. Walk across for breathtaking views and stop by <em>DUMBO</em> for unique photo ops.</li>
+                <li><strong>Lunch:</strong> Savor international cuisine at <strong>Chelsea Market</strong>, a foodie’s paradise.</li>
+                <li><strong>Afternoon:</strong> Explore <em>The High Line</em>, an elevated urban park with stunning views and art installations.</li>
+                <li><strong>Evening:</strong> End your trip with sunset cocktails at <strong>Top of the Rock</strong> for a magical view of the city.</li>
+            </ul>
+        </article>
+
+        <article class="itinerary-tips">
+            <h4>Additional Tips</h4>
+            <ul>
+                <li><strong>Transportation:</strong> Use a MetroCard for unlimited subway and bus rides.</li>
+                <li><strong>Weather:</strong> Pack layers; New York weather can be unpredictable.</li>
+                <li><strong>Time-Saving:</strong> Book tickets online for popular attractions to skip the lines.</li>
+            </ul>
+        </article>
+    </div>
+</div>
+
+<!-- Modal for Paris -->
+<div id="modal-paris" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3>Paris in 48 Hours: A Whirlwind Tour of the City of Light</h3>
+        <p>
+            Paris, the City of Light, offers an abundance of experiences that can be savored even in a short visit. Here's a curated 2-day itinerary to immerse yourself in its iconic landmarks and hidden treasures:
+        </p>
+        <article class="itinerary-day">
+            <h4>Day 1: Iconic Landmarks and Cultural Experiences</h4>
+            <ul>
+                <li><strong>Morning:</strong> Begin at the <em>Eiffel Tower</em>. Arrive early to ascend and enjoy panoramic views of the city. Booking tickets in advance is recommended to avoid long queues.</li>
+                <li><strong>Mid-Morning:</strong> Stroll along the <em>Champs-Élysées</em>, leading up to the majestic <em>Arc de Triomphe</em>. Consider climbing to the top for another perspective of Paris.</li>
+                <li><strong>Lunch:</strong> Savor traditional French cuisine at a café in the <em>Le Marais</em> district, known for its charming streets and vibrant atmosphere.</li>
+                <li><strong>Afternoon:</strong> Visit the <em>Louvre Museum</em> to admire masterpieces like the Mona Lisa. Allocate at least a couple of hours to explore its vast collections.</li>
+                <li><strong>Evening:</strong> Experience a Seine River cruise to witness illuminated landmarks, offering a magical view of Paris by night.</li>
+            </ul>
+        </article>
+        <article class="itinerary-day">
+            <h4>Day 2: Artistic Quarters and Local Flavors</h4>
+            <ul>
+                <li><strong>Morning:</strong> Explore <em>Montmartre</em>, visiting the <em>Sacré-Cœur Basilica</em> and wandering through artists' squares. The area offers a bohemian vibe and stunning city views.</li>
+                <li><strong>Lunch:</strong> Enjoy a meal at a local bistro in Montmartre, sampling dishes like coq au vin or quiche Lorraine.</li>
+                <li><strong>Afternoon:</strong> Discover the <em>Musée d'Orsay</em>, home to an extensive collection of Impressionist art. The museum itself is housed in a former railway station, adding to its charm.</li>
+                <li><strong>Evening:</strong> Conclude your journey with a visit to the <em>Latin Quarter</em>, enjoying live music and perhaps a glass of wine at a cozy café.</li>
+            </ul>
+        </article>
+        <article class="itinerary-tips">
+            <h4>Additional Tips</h4>
+            <ul>
+                <li><strong>Transportation:</strong> Utilize the Paris Métro for efficient travel between attractions. Consider purchasing a day pass for unlimited rides.</li>
+                <li><strong>Language:</strong> While French is the primary language, many Parisians in tourist areas speak English. Learning a few basic French phrases can enhance your experience.</li>
+                <li><strong>Etiquette:</strong> A polite "Bonjour" (Hello) when entering shops or restaurants is customary and appreciated.</li>
+            </ul>
+        </article>
+    </div>
+</div>
+
+<section id="photo-albums" class="section-padding">
+    <h2>Photo Albums</h2>
+    <div class="albums-container">
+        <!-- Paris Album -->
+        <div class="album" data-album="paris">
+            <img src="images/pariscover.jpg" alt="Paris Album Cover" class="album-cover">
+            <h3>Paris</h3>
+        </div>
+
+        <!-- New York Album -->
+        <div class="album" data-album="newyork">
+            <img src="images/nyccover.jpg" alt="New York Album Cover" class="album-cover">
+            <h3>New York</h3>
+        </div>
+
+        <!-- Barcelona Album -->
+        <div class="album" data-album="barcelona">
+            <img src="images/barcelonacover.jpg" alt="Barcelona Album Cover" class="album-cover">
+            <h3>Barcelona</h3>
+        </div>
+    </div>
+</section>
+
+<!-- Modal Structure -->
+<div id="album-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+            <h3 id="album-title"></h3>
+        </div>
+        <div class="gallery" id="modal-gallery">
+            <!-- Images will be injected here -->
+        </div>
+    </div>
+</div>
+
+
+
+    </main>
+    <script src="js/script.js"></script>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h2>Keelin's Kilometers</h2>
+            </div>
+            <div class="footer-right">
+                <div class="footer-location">
+                    <h3>Location</h3>
+                    <p>123 Demo Street<br>New York, NY 12345</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p><a href="mailto:mckeon@umich.edu">mckeon@umich.edu</a><br>(555) 555-5555</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js" defer></script>
+    </body>
+</html>
+

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link id="dark-mode-stylesheet" rel="stylesheet" href="css/dark-mode.css" />
+    <link rel="stylesheet" href="js/leaflet.css">
+    <script src="js/leaflet.js"></script>
+    <title>My Trips - Keelin's Kilometers</title>
+</head>
+<body>
+    <header id="main-header">
+        <div class="navbar">
+            <div class="navbar-left">
+                <h1 id="site-title">Keelin's Kilometers</h1>
+            </div>
+            <div class="navbar-right">
+                <nav id="nav-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="trips.html">My Trips</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="content">
+        <!-- Intro Section -->
+        <section id="trip-intro">
+            <h2>Welcome to My Travel Adventures</h2>
+            <p>From Europe to America, I've had the privilege to explore breathtaking cities, serene beaches, and vibrant cultures. Here’s a glimpse into my journey so far!</p>
+        </section>
+
+        <div class="featured-destinations">
+            <h2>Destinations I've Explored</h2>
+            <div class="trip" id="trip-madrid">
+                <h3 class="trip-title">Madrid, Spain</h3>
+                <img src="images/madrid.jpg" alt="Madrid City" class="trip-image" data-lightbox="madrid">
+                <p class="trip-description">The vibrant capital of Spain, known for its lively plazas, world-class art museums, and delicious tapas.</p>
+                <button class="top-tip-btn">Top Tip</button>
+                <div class="top-tip-content" style="display: none;">
+                    <p>Visit Retiro Park and explore the Prado Museum for an unforgettable cultural experience.</p>
+                </div>
+                <button class="weather-btn" onclick="showWeather('Madrid')">Weather</button>
+            </div>
+            
+            <div class="trip" id="trip-manchester">
+                <h3 class="trip-title">Manchester, England</h3>
+                <img src="images/manchester.jpg" alt="Manchester City" class="trip-image" data-lightbox="manchester">
+                <p class="trip-description">A bustling city in the UK famous for its rich industrial heritage, lively music scene, and football culture.</p>
+                <button class="top-tip-btn">Top Tip</button>
+                <div class="top-tip-content" style="display: none;">
+                    <p>Check out the Northern Quarter for quirky cafes and boutique shops.</p>
+                </div>
+                <button class="weather-btn" onclick="showWeather('Manchester')">Weather</button>
+            </div>
+            
+            <div class="trip" id="trip-paris">
+                <h3 class="trip-title">Paris, France</h3>
+                <img src="images/paris.jpg" alt="Eiffel Tower in Paris" class="trip-image" data-lightbox="paris">
+                <p class="trip-description">The City of Light with iconic landmarks like the Eiffel Tower, the Louvre, and charming streets to explore.</p>
+                <button class="top-tip-btn">Top Tip</button>
+                <div class="top-tip-content" style="display: none;">
+                    <p>Enjoy a river cruise on the Seine for stunning views of the city.</p>
+                </div>
+                <button class="weather-btn" onclick="showWeather('Paris')">Weather</button>
+            </div>
+            
+
+            <div class="trip" id="trip-london">
+                <h3 class="trip-title">London, England</h3>
+                <img src="images/london.jpg" alt="London City" class="trip-image" data-lightbox="london">
+                <p class="trip-description">The bustling capital of the UK, known for its historic landmarks like the Tower of London and Big Ben.</p>
+                <button class="top-tip-btn">Top Tip</button>
+                <div class="top-tip-content" style="display: none;">
+                    <p>Visit Borough Market for an authentic London foodie experience.</p>
+                </div>
+                <button class="weather-btn" onclick="showWeather('London')">Weather</button>
+            </div>
+            
+            <div class="trip" id="trip-barcelona">
+                <h3 class="trip-title">Barcelona, Spain</h3>
+                <img src="images/barcelona.jpg" alt="Barcelona" class="trip-image">
+                <p class="trip-description">Home to Gaudí’s stunning architecture, vibrant nightlife, and beautiful beaches along the Mediterranean coast.</p>
+                <button class="top-tip-btn">Top Tip</button>
+                <div class="top-tip-content" style="display: none;">
+                    <p>Visit Park Güell early in the morning to beat the crowds.</p>
+                </div>
+                <button class="weather-btn" onclick="showWeather('Barcelona')">Weather</button>
+            </div>
+            
+
+            <div class="trip" id="trip-newyork">
+                <h3 class="trip-title">New York City, USA</h3>
+                <img src="images/nyc.jpg" alt="New York City" class="trip-image" data-lightbox="new york">
+                <p class="trip-description">The city that never sleeps, filled with towering skyscrapers, Broadway shows, and endless attractions.</p>
+                <button class="top-tip-btn">Top Tip</button>
+                <div class="top-tip-content" style="display: none;">
+                    <p>Take a walk on the High Line for unique views of the city.</p>
+                </div>
+                <button class="weather-btn" onclick="showWeather('New York')">Weather</button>
+            </div>
+            
+            <div class="trip" id="trip-zakynthos">
+                <h3 class="trip-title">Zakynthos, Greece</h3>
+                <img src="images/zakynthos.jpg" alt="Zakynthos" class="trip-image" data-lightbox="zakynthos">
+                <p class="trip-description">Known for its turquoise waters, white cliffs, and the famous Navagio Beach.</p>
+                <button class="top-tip-btn">Top Tip</button>
+                <div class="top-tip-content" style="display: none;">
+                    <p>Take a boat tour to explore the hidden sea caves.</p>
+                </div>
+                <button class="weather-btn" onclick="showWeather('Zakynthos')">Weather</button>
+            </div>
+            
+            <div class="trip" id="trip-dublin">
+                <h3 class="trip-title">Dublin, Ireland</h3>
+                <img src="images/dublin.jpg" alt="Dublin City" class="trip-image" data-lightbox="dublin">
+                <p class="trip-description">The lively capital of Ireland, known for its rich history, literature, and Guinness beer.</p>
+                <button class="top-tip-btn">Top Tip</button>
+                <div class="top-tip-content" style="display: none;">
+                    <p>Take a stroll through Trinity College’s Long Room Library.</p>
+                </div>
+                <button class="weather-btn" onclick="showWeather('Dublin')">Weather</button>
+            </div>
+            
+            <div class="trip" id="trip-michigan">
+                <h3 class="trip-title">Michigan, USA</h3>
+                <img src="images/michigan.jpg" alt="Michigan Landscape" class="trip-image" data-lightbox="michigan">
+                <p class="trip-description">Experience the natural beauty of the Great Lakes State, with its serene beaches, forests, and charming towns.</p>
+                <button class="top-tip-btn">Top Tip</button>
+                <div class="top-tip-content" style="display: none;">
+                    <p>Visit Sleeping Bear Dunes for incredible lake views.</p>
+                </div>
+                <button class="weather-btn" onclick="showWeather('Michigan')">Weather</button>
+            </div>
+            
+            <div class="trip" id="trip-tenerife">
+                <h3 class="trip-title">Tenerife, Canary Islands</h3>
+                <img src="images/tenerife.jpg" alt="Tenerife" class="trip-image" data-lightbox="tenerife">
+                <p class="trip-description">The largest Canary Island with volcanic landscapes, beautiful beaches, and lively resorts.</p>
+                <button class="top-tip-btn">Top Tip</button>
+                <div class="top-tip-content" style="display: none;">
+                    <p>Hike Mount Teide for spectacular views.</p>
+                </div>
+                <button class="weather-btn" onclick="showWeather('Tenerife')">Weather</button>
+            </div>
+            
+            <div class="trip" id="trip-vilamoura">
+                <h3 class="trip-title">Vilamoura, Portugal</h3>
+                <img src="images/portugal.jpg" alt="Vilamoura Portugal" class="trip-image" data-lightbox="portugal">
+                <p class="trip-description">A beautiful coastal town known for its golden beaches, vibrant marina, and historic sites.</p>
+                <button class="top-tip-btn">Top Tip</button>
+                <div class="top-tip-content" style="display: none;">
+                    <p>Don’t miss the pastel de nata (custard tarts) at a local bakery.</p>
+                </div>
+                <button class="weather-btn" onclick="showWeather('Vilamoura')">Weather</button>
+            </div>
+            
+            <div class="trip" id="trip-florida">
+                <h3 class="trip-title">Orlando, Florida</h3>
+                <img src="images/florida.jpg" alt="Orlando Theme Parks" class="trip-image" data-lightbox="orlando">
+                <p class="trip-description">The ultimate destination for theme parks like Disney World and Universal Studios.</p>
+                <button class="top-tip-btn">Top Tip</button>
+                <div class="top-tip-content" style="display: none;">
+                    <p>Plan your day in advance to maximize time at the parks.</p>
+                </div>
+                <button class="weather-btn" onclick="showWeather('Orlando')">Weather</button>
+            </div>
+            
+            </div>
+           
+             <!-- Modal for Weather -->
+             <div id="weather-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>Weather in <span id="weather-location"></span></h2>
+                    <p id="weather-data">Loading...</p>
+                </div>
+            </div>
+            
+            <section id="suggestion-box">
+                <h2>Where Should I Go Next?</h2>
+             
+            
+                <h3>Vote for My Next Trip:</h3>
+                <div class="poll-options">
+                    <label>
+                        <input type="radio" name="poll" value="Bali, Indonesia"> Bali, Indonesia
+                    </label>
+                    <label>
+                        <input type="radio" name="poll" value="Tokyo, Japan"> Tokyo, Japan
+                    </label>
+                    <label>
+                        <input type="radio" name="poll" value="Sydney, Australia"> Sydney, Australia
+                    </label>
+                    <label>
+                        <input type="radio" name="poll" value="Cape Town, South Africa"> Cape Town, South Africa
+                    </label>
+                </div>
+                <button id="poll-submit" class="submit-btn">Submit Vote</button>
+            
+                <div id="poll-result" style="display: none;">
+                    <h3>Poll Results:</h3>
+                    <ul id="poll-results-list"></ul>
+                </div>
+            </section>
+            
+            </div>
+        </div>
+                <!-- Interactive Map -->
+                <!-- Interactive Map -->
+<section id="travel-map">
+    <h2>Explore My Travel Map</h2>
+    <div id="map"></div>
+    <script>
+        var map = L.map('map').setView([51.505, -0.09], 2);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        var destinations = [
+            { coords: [40.4168, -3.7038], name: "Madrid, Spain" },
+            { coords: [53.483959, -2.244644], name: "Manchester, England" },
+            { coords: [48.8566, 2.3522], name: "Paris, France" },
+            { coords: [51.5074, -0.1278], name: "London, England" },
+            { coords: [41.3879, 2.16992], name: "Barcelona, Spain" },
+            { coords: [40.7128, -74.0060], name: "New York City, USA" },
+            { coords: [37.7500, 20.8999], name: "Zakynthos, Greece" },
+            { coords: [53.3498, -6.2603], name: "Dublin, Ireland" },
+            { coords: [44.3148, -85.6024], name: "Michigan, USA" },
+            { coords: [28.2916, -16.6291], name: "Tenerife, Canary Islands" },
+            { coords: [37.0921, -8.2475], name: "Vilamoura, Portugal" },
+            { coords: [28.5383, -81.3792], name: "Orlando, Florida" }
+        ];
+
+        destinations.forEach(function(dest) {
+            L.marker(dest.coords).addTo(map).bindPopup(`<b>${dest.name}</b>`);
+        });
+    </script>
+</section>
+
+        
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h2>Keelin's Kilometers</h2>
+            </div>
+            <div class="footer-right">
+                <div class="footer-location">
+                    <h3>Location</h3>
+                    <p>123 Demo Street<br>New York, NY 12345</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p><a href="mailto:email@example.com">mckeon@umich.edu</a><br>(555) 555-5555</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
+
